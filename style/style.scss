@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$flag: 0;
+
+.brdr1 {
+    @if($flag==1) {
+        border: 1px solid black;
+    }
+}
+
+.brdr2 {
+    @if($flag==1) {
+        border: 1px solid brown;
+    }
+}
+
+.brdr3 {
+    @if($flag==1) {
+        border: 1px solid chartreuse;
+    }
+}
+
+@font-face {
+    font-family: tourney;
+    src: url(../fonts/Tourney-Medium.ttf);
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #124e78;
+
+    >.list {
+        @extend .brdr1;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >ul {
+            @extend .brdr1;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            >li {
+                @extend .brdr3;
+                list-style-type: none;
+                height: 25%;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 40px;
+                font-family: tourney;
+                position: relative;
+                transition-duration: 2s;
+                transition-timing-function: ease-out;
+
+                &::before {
+                    content: "|";
+                    position: absolute;
+                    left: -10px;
+                    bottom: 20px;
+                    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                    transition: all 1s linear;
+                }
+                >span{
+                    &:last-of-type{
+                        transition: all 1s linear;
+                    }
+                }
+
+                &:nth-of-type(1) {
+                    width: 110px;
+
+                    &::before {
+                        color: #f0f0c9;
+                    }
+
+                    >span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        &:last-of-type {
+                            width: 0;
+                            overflow: hidden;
+                            color: #f0f0c9;
+                        }
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    width: 169px;
+
+                    &::before {
+                        color: #f2bb05;
+                    }
+
+                    >span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        &:last-of-type {
+                            width: 0;
+                            overflow: hidden;
+                            color:#f2bb05;
+                        }
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    width: 165px;
+
+                    &::before {
+                        color: #d74e09;
+                    }
+
+                    >span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        &:last-of-type {
+                            width: 0;
+                            overflow: hidden;
+                            color: #d74e09;
+                        }
+                    }
+                }
+
+                &:nth-of-type(4) {
+                    width: 196px;
+                    &::before {
+                        color: #6e0e0a;
+                    }
+                    >span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        &:last-of-type {
+                            width: 0;
+                            overflow: hidden;
+                            color: #6e0e0a;
+                        }
+                    }
+                }
+                &:hover>span:last-of-type {
+                    width: 100%;
+                }
+                &:hover::before{
+                    left: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: tourney;
+  src: url(../fonts/Tourney-Medium.ttf);
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #124e78;
+}
+body > .list {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body > .list > ul {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+body > .list > ul > li {
+  list-style-type: none;
+  height: 25%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  font-family: tourney;
+  position: relative;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+}
+body > .list > ul > li::before {
+  content: "|";
+  position: absolute;
+  left: -10px;
+  bottom: 20px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  transition: all 1s linear;
+}
+body > .list > ul > li > span:last-of-type {
+  transition: all 1s linear;
+}
+body > .list > ul > li:nth-of-type(1) {
+  width: 110px;
+}
+body > .list > ul > li:nth-of-type(1)::before {
+  color: #f0f0c9;
+}
+body > .list > ul > li:nth-of-type(1) > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body > .list > ul > li:nth-of-type(1) > span:last-of-type {
+  width: 0;
+  overflow: hidden;
+  color: #f0f0c9;
+}
+body > .list > ul > li:nth-of-type(2) {
+  width: 169px;
+}
+body > .list > ul > li:nth-of-type(2)::before {
+  color: #f2bb05;
+}
+body > .list > ul > li:nth-of-type(2) > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body > .list > ul > li:nth-of-type(2) > span:last-of-type {
+  width: 0;
+  overflow: hidden;
+  color: #f2bb05;
+}
+body > .list > ul > li:nth-of-type(3) {
+  width: 165px;
+}
+body > .list > ul > li:nth-of-type(3)::before {
+  color: #d74e09;
+}
+body > .list > ul > li:nth-of-type(3) > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body > .list > ul > li:nth-of-type(3) > span:last-of-type {
+  width: 0;
+  overflow: hidden;
+  color: #d74e09;
+}
+body > .list > ul > li:nth-of-type(4) {
+  width: 196px;
+}
+body > .list > ul > li:nth-of-type(4)::before {
+  color: #6e0e0a;
+}
+body > .list > ul > li:nth-of-type(4) > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body > .list > ul > li:nth-of-type(4) > span:last-of-type {
+  width: 0;
+  overflow: hidden;
+  color: #6e0e0a;
+}
+body > .list > ul > li:hover > span:last-of-type {
+  width: 100%;
+}
+body > .list > ul > li:hover::before {
+  left: 100%;
+}/*# sourceMappingURL=style.css.map */
